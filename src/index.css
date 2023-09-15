@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* --------------- EVEÑT --------------- */
+.event {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #f4f4f4;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+.ecategory {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.etitle {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #cc4100;
+}
+
+.edetail {
+  font-size: 1em;
+}
+
+li {
+  list-style: none;
+}

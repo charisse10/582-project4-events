@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import User from "./components/User";
 import Admin from "./components/Admin";
+import Events from "./components/Events";
+import Event from "./components/Event";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,23 @@ const router = createBrowserRouter([
       </div>
     ),
   },
+  {
+    path: '/events',
+    element: (
+      <div>
+        <Events/>
+      </div>
+    ),
+    children: [
+      {
+        path: 'event/:_id',
+        element:
+          <div>
+            <Event />
+          </div>
+      },
+    ],
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

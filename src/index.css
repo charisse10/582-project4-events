@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-/* --------------- EVEÑT --------------- */
+/* --------------- EVENT --------------- */
 .event {
   display: grid;
   grid-template-columns: 1fr;

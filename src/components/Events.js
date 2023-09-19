@@ -55,7 +55,6 @@ function EventList() {
                   onChange={(e) => {
                     const selectedCategory = e.target.value;
                     const updatedCategories = [...selectedCategories];
-
                     if (e.target.checked) {
                       updatedCategories.push(selectedCategory);
                     } else {
@@ -64,7 +63,6 @@ function EventList() {
                         updatedCategories.splice(index, 1);
                       }
                     }
-
                     applyFilter(updatedCategories);
                   }}
                 />

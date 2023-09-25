@@ -54,8 +54,8 @@ class Add extends Component {
 
     render() {
         return (
-            <section className="section-form">
-                <div className="container">
+            <section class="form">
+                <div class="container">
                     <h2>Add Event</h2>
                     <form onSubmit={this.addEvent}>
                         <input
@@ -152,7 +152,7 @@ class Add extends Component {
                         />
                     </form>
                     {this.state.isSubmitted && (
-                        <p className="added">Event added successfully!</p>
+                        <p class="added">Event added successfully!</p>
                     )}
                 </div>
             </section>

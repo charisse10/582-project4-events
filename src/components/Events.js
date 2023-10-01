@@ -5,6 +5,8 @@ function EventList() {
     const [events, setEvents] = useState([]);
     const [uniqueCategories, setUniqueCategories] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
+
+    
     const handleDelete = (deletedEventId) => {
     setEvents(events.filter(event => event._id !== deletedEventId));
   };
@@ -44,9 +46,9 @@ function EventList() {
 
     return (
         <div>
-            <div class="container">
+            <div className="container">
                 <div className="events-flex">
-                    <section class="filter">
+                    <section className="filter">
                         <h2>Filter by Category</h2>
                         <ul>
                             {uniqueCategories.map((category) => (
@@ -90,7 +92,7 @@ function EventList() {
                         </ul>
                     </section>
 
-                    <section class="eventslist">
+                    <section className="eventslist">
                         <h2>Events</h2>
                         <ul>
                             {filteredEvents.map((event) => (

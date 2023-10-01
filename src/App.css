@@ -157,13 +157,15 @@ footer {
     color: #fff;
     padding: 25px 0;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 25px;
 }
 
 
 /* --------------- HOME --------------- */
-.home-events .delete-btn {
+.home-events .delete-btn,
+.home-events .interest-btn {
     display: none;
+    opacity: 0;
 }
 
 /* --------------- USER --------------- */
@@ -174,6 +176,25 @@ footer {
 
 .user-events .delete-btn {
     display: none;
+}
+
+.interest-btn {
+    text-align: center;
+    margin: 25px 0 -25px;
+}
+
+button {
+    background-color: rgb(249, 87, 6);
+    color: #fff;
+    padding: 0.5rem 3rem;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.user-events button:hover {
+    background-color: #000;
 }
 
 /* --------------- ADMIN --------------- */
@@ -223,6 +244,10 @@ footer {
 }
 
 .admin-events section.filter {
+    display: none;
+}
+
+.admin-events .interest-btn{
     display: none;
 }
 

@@ -2,13 +2,13 @@ export default function Navbar() {
     return (
         <div>
             <nav>
-                <div class="container">
-                    <div class="header-flex">
-                        <div class="logo">
+                <div className="container">
+                    <div className="header-flex">
+                        <div className="logo">
                             <img src="/dot.png" alt="logo" />
                             <a href="/">com / events</a>
                         </div>
-                        <div class="access">
+                        <div className="access">
                             <a href="/user">USER</a>
                             <a href="/admin">ADMIN</a>
                         </div>

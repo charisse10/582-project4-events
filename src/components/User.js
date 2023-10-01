@@ -8,8 +8,8 @@ export default function User() {
                     <h1> Welcome Max! </h1>
                 </div>
             </div>
-            <div class="user-events">
-                    <Events/>
+            <div className="user-events">
+                <Events/>
             </div>
         </div>
     )

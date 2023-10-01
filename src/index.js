@@ -9,6 +9,7 @@ import User from "./components/User";
 import Admin from "./components/Admin";
 import Events from "./components/Events";
 import Event from "./components/Event";
+import Footer from "./components/Footer";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <App />
+        <Footer/>
       </div>
     ),
   },
@@ -26,6 +28,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <User />
+        <Footer/>
       </div>
     ),
   },
@@ -35,6 +38,7 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <Admin />
+        <Footer/>
       </div>
     ),
   },

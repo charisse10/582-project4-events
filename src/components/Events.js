@@ -41,8 +41,10 @@ function EventList() {
 
     return (
         <div>
+                            <div class="container">
+
+            <div className="events-flex">
             <section class="filter">
-                <div class="container">
                     <h2>Filter by Category</h2>
                     <ul>
                         {uniqueCategories.map((category) => (
@@ -84,19 +86,19 @@ function EventList() {
                             </li>
                         ))}
                     </ul>
-                </div>
             </section>
 
             <section class="eventslist">
-                <div class="container">
                     <h2>Events</h2>
                     <ul>
                         {filteredEvents.map((event) => (
                             <Event key={event._id} event={event} />
                         ))}
                     </ul>
-                </div>
             </section>
+                </div>
+                            </div>
+
         </div>
     );
 }

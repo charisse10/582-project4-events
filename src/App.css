@@ -10,6 +10,10 @@ html {
 
 body {
   font-family: Poppins, sans-serif;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("https://images.pexels.com/photos/172505/pexels-photo-172505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -33,13 +37,14 @@ h2 {
 
 /* --------------- HEADER --------------- */
 nav {
-  background-color: rgb(249, 111, 6);
-  padding: 25px 0;
+  background-color: rgb(47, 68, 119);
 }
 
 .header-flex {
   display: flex;
   justify-content: space-between;
+  height: 100px;
+  align-items: center;
 }
 
 .logo {
@@ -55,11 +60,21 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   margin-left: 0.5rem;
+  border-bottom: 2px solid transparent;
+}
+
+.logo a:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .access a {
     font-weight: 600;
-    margin-left: 3rem;
+    margin-left: 1.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.access a:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .title {
@@ -73,10 +88,8 @@ h1 {
 }
 
 /* --------------- FILTER --------------- */
-/* --------------- FILTER --------------- */
 .filter {
   padding: 25px 0;
-  background-color: rgb(246, 246, 246);
 }
 
 .filter label {
@@ -91,8 +104,9 @@ h1 {
 }
 
 /* --------------- EVENTS--------------- */
-.eventslist {
+.eventslist ul{
   padding: 25px 0;
+  display: grid 1fr;
 }
 
 /* --------------- EVENT--------------- */
@@ -101,7 +115,11 @@ h1 {
   margin-bottom: 1rem;
   padding: 50px 25px 75px;
   border-radius: 25px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.event:hover {
+  background-color: rgba(47, 68, 119, 0.5);
 }
 
 h4 {
@@ -130,7 +148,7 @@ h3 {
   background-color: rgb(232, 232, 232);;
   padding: 25px 0;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   border-radius: 25px;
 }
 
@@ -154,7 +172,82 @@ h3 {
   border-radius: 25px;
   border: none;
   display: block;
-  width: 25%;
-  margin: 25px auto;
+  width: 200px;
+  margin: 25px auto -25px;
   text-transform: uppercase;
+}
+
+.form .added {
+  text-align: center;
+}
+
+.admin-header,
+.user-header {
+  text-align: center;
+  padding: 35px 0;
+}
+
+/* --------------- RESPONSIVE --------------- */
+@media only screen and (min-width: 576px) {
+  .access a {
+    margin-left: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .events-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    section.filter {
+      width: 30%;
+      padding: 0;
+    }
+  
+    section.eventslist {
+      width: 60%;
+    }
+
+    section.eventslist ul {
+      padding: 0;
+    }
+
+  .form {
+    max-width: 700px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+      section.filter {
+          width: 25%;
+          padding: 0;
+        }
+      
+        section.eventslist {
+          width: 70%;
+        }
+
+    .eventslist ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1.5rem
+      }
+    .event {
+    margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+      section.filter {
+          width: 15%;
+        }
+      
+        section.eventslist {
+          width: 80%;
+        }
+
+  .eventslist ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

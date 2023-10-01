@@ -150,7 +150,33 @@ h3 {
     margin-left: 50px;
 }
 
-/* --------------- FORM--------------- */
+
+/* --------------- FOOTER --------------- */
+footer {
+    background-color: rgb(249, 87, 6);
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+
+/* --------------- HOME --------------- */
+.home-events .delete-btn {
+    display: none;
+}
+
+/* --------------- USER --------------- */
+.user-header {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.user-events .delete-btn {
+    display: none;
+}
+
+/* --------------- ADMIN --------------- */
 .form {
     background-color: rgb(232, 232, 232);
     padding: 25px 0;
@@ -182,14 +208,16 @@ h3 {
     width: 200px;
     margin: 25px auto -25px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 .form .added {
     text-align: center;
+    margin-top: 50px;
+    margin-bottom: -50px;
 }
 
-.admin-header,
-.user-header {
+.admin-header {
     text-align: center;
     padding: 35px 0;
 }
@@ -202,12 +230,23 @@ h3 {
     width: 100%;
 }
 
-footer {
+.delete-btn {
+    text-align: center;
+    margin: 25px 0 -25px;
+}
+
+.admin-events button {
     background-color: rgb(249, 87, 6);
     color: #fff;
-    padding: 25px 0;
-    text-align: center;
-    margin-top: 80px;
+    padding: 0.5rem 3rem;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.admin-events button:hover {
+    background-color: #000;
 }
 
 /* --------------- RESPONSIVE --------------- */

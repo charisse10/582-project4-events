@@ -5,6 +5,9 @@ function EventList() {
     const [events, setEvents] = useState([]);
     const [uniqueCategories, setUniqueCategories] = useState([]);
     const [selectedCategories, setSelectedCategories] = useState([]);
+    const handleDelete = (deletedEventId) => {
+    setEvents(events.filter(event => event._id !== deletedEventId));
+  };
 
     useEffect(() => {
         async function fetchEvents() {
@@ -41,64 +44,62 @@ function EventList() {
 
     return (
         <div>
-                            <div class="container">
-
-            <div className="events-flex">
-            <section class="filter">
-                    <h2>Filter by Category</h2>
-                    <ul>
-                        {uniqueCategories.map((category) => (
-                            <li key={category}>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        value={category}
-                                        checked={selectedCategories.includes(
-                                            category
-                                        )}
-                                        onChange={(e) => {
-                                            const selectedCategory =
-                                                e.target.value;
-                                            const updatedCategories = [
-                                                ...selectedCategories,
-                                            ];
-                                            if (e.target.checked) {
-                                                updatedCategories.push(
-                                                    selectedCategory
-                                                );
-                                            } else {
-                                                const index =
-                                                    updatedCategories.indexOf(
+            <div class="container">
+                <div className="events-flex">
+                    <section class="filter">
+                        <h2>Filter by Category</h2>
+                        <ul>
+                            {uniqueCategories.map((category) => (
+                                <li key={category}>
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            value={category}
+                                            checked={selectedCategories.includes(
+                                                category
+                                            )}
+                                            onChange={(e) => {
+                                                const selectedCategory =
+                                                    e.target.value;
+                                                const updatedCategories = [
+                                                    ...selectedCategories,
+                                                ];
+                                                if (e.target.checked) {
+                                                    updatedCategories.push(
                                                         selectedCategory
                                                     );
-                                                if (index !== -1) {
-                                                    updatedCategories.splice(
-                                                        index,
-                                                        1
-                                                    );
+                                                } else {
+                                                    const index =
+                                                        updatedCategories.indexOf(
+                                                            selectedCategory
+                                                        );
+                                                    if (index !== -1) {
+                                                        updatedCategories.splice(
+                                                            index,
+                                                            1
+                                                        );
+                                                    }
                                                 }
-                                            }
-                                            applyFilter(updatedCategories);
-                                        }}
-                                    />
-                                    {category}
-                                </label>
-                            </li>
-                        ))}
-                    </ul>
-            </section>
+                                                applyFilter(updatedCategories);
+                                            }}
+                                        />
+                                        {category}
+                                    </label>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
 
-            <section class="eventslist">
-                    <h2>Events</h2>
-                    <ul>
-                        {filteredEvents.map((event) => (
-                            <Event key={event._id} event={event} />
-                        ))}
-                    </ul>
-            </section>
+                    <section class="eventslist">
+                        <h2>Events</h2>
+                        <ul>
+                            {filteredEvents.map((event) => (
+                                <Event key={event._id} event={event} onDelete={handleDelete}/>
+                            ))}
+                        </ul>
+                    </section>
                 </div>
-                            </div>
-
+            </div>
         </div>
     );
 }

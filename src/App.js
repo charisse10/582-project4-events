@@ -5,10 +5,12 @@ import Events from "./components/Events";
 function App() {
     return (
         <div>
-            <div class="title">
+            <div className="title">
                 <h1> Côte Saint-Luc 2023</h1>
             </div>
-            <Events />
+            <div className="home-events">
+                <Events />
+            </div>
         </div>
     );
 }
